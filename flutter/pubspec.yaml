@@ -1,0 +1,45 @@
+name: fitgo
+description: "AI-powered fitness meal planning application."
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # HTTP & Networking
+  dio: ^5.3.0
+
+  # State Management
+  provider: ^6.0.0
+  riverpod: ^2.4.0
+  flutter_riverpod: ^2.4.0
+
+  # Local Storage & Security
+  flutter_secure_storage: ^9.0.0
+  shared_preferences: ^2.2.0
+
+  # JSON Serialization
+  json_annotation: ^4.8.0
+
+  # HTML & Utilities
+  flutter_html: ^3.0.0
+
+  # UI & Utilities
+  freezed_annotation: ^2.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+  build_runner: ^2.4.0
+  json_serializable: ^6.7.0
+  freezed: ^2.4.0
+
+flutter:
+  uses-material-design: true

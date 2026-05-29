@@ -1,0 +1,84 @@
+page {
+  min-height: 100vh;
+  color: #1d2433;
+  background: #f5f7fb;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+view,
+text,
+button,
+input,
+textarea {
+  box-sizing: border-box;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 28rpx 32rpx 48rpx;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 32rpx;
+  box-shadow: 0 18rpx 46rpx rgba(18, 25, 47, 0.07);
+}
+
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 42rpx 0 20rpx;
+}
+
+.section-title {
+  color: #1d2433;
+  font-size: 38rpx;
+  font-weight: 800;
+}
+
+.section-subtitle {
+  margin-top: 8rpx;
+  color: #737b91;
+  font-size: 24rpx;
+}
+
+.primary-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 78rpx;
+  padding: 0 30rpx;
+  color: #ffffff;
+  font-size: 28rpx;
+  font-weight: 700;
+  line-height: 78rpx;
+  background: #12192f;
+  border: 0;
+  border-radius: 999rpx;
+}
+
+.primary-button::after {
+  border: 0;
+}
+
+.muted {
+  color: #737b91;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 10rpx 10rpx 0;
+  padding: 8rpx 18rpx;
+  color: #5e5ce6;
+  font-size: 22rpx;
+  font-weight: 700;
+  background: #f0f1ff;
+  border-radius: 999rpx;
+}
+
+.price {
+  color: #ff8a5b;
+  font-weight: 900;
+}

@@ -1,0 +1,312 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 88rpx;
+  height: 88rpx;
+  color: #ffffff;
+  font-size: 42rpx;
+  background: linear-gradient(135deg, #5e5ce6, #ff8a5b);
+  border-radius: 30rpx;
+}
+
+.brand {
+  flex: 1;
+}
+
+.brand-name {
+  color: #1d2433;
+  font-size: 40rpx;
+  font-weight: 900;
+  letter-spacing: 2rpx;
+}
+
+.brand-subtitle {
+  margin-top: 4rpx;
+  color: #737b91;
+  font-size: 22rpx;
+}
+
+.online-pill {
+  padding: 14rpx 22rpx;
+  color: #1d2433;
+  font-size: 24rpx;
+  background: #ffffff;
+  border-radius: 999rpx;
+}
+
+.hero {
+  margin-top: 34rpx;
+  padding: 44rpx;
+  color: #ffffff;
+  background: linear-gradient(135deg, #12192f, #2c3470 55%, #5e5ce6);
+  border-radius: 48rpx;
+  box-shadow: 0 34rpx 70rpx rgba(94, 92, 230, 0.25);
+}
+
+.hero-pill {
+  display: inline-flex;
+  padding: 12rpx 20rpx;
+  font-size: 24rpx;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1rpx solid rgba(255, 255, 255, 0.22);
+  border-radius: 999rpx;
+}
+
+.hero-title {
+  margin-top: 34rpx;
+  font-size: 52rpx;
+  font-weight: 900;
+  line-height: 1.18;
+}
+
+.hero-desc {
+  margin-top: 22rpx;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 27rpx;
+  line-height: 1.65;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 20rpx;
+  margin-top: 34rpx;
+}
+
+.hero-primary,
+.hero-secondary {
+  height: 78rpx;
+  margin: 0;
+  padding: 0 30rpx;
+  font-size: 27rpx;
+  font-weight: 800;
+  line-height: 78rpx;
+  border-radius: 999rpx;
+}
+
+.hero-primary {
+  color: #12192f;
+  background: #ffffff;
+}
+
+.hero-secondary {
+  color: #ffffff;
+  background: transparent;
+  border: 1rpx solid rgba(255, 255, 255, 0.42);
+}
+
+.hero-primary::after,
+.hero-secondary::after {
+  border: 0;
+}
+
+.stats {
+  display: flex;
+  gap: 18rpx;
+  margin-top: 28rpx;
+}
+
+.stat {
+  flex: 1;
+  padding: 28rpx 0;
+  text-align: center;
+}
+
+.stat-value {
+  color: #5e5ce6;
+  font-size: 36rpx;
+  font-weight: 900;
+}
+
+.stat-label {
+  margin-top: 6rpx;
+  color: #737b91;
+  font-size: 23rpx;
+}
+
+.package-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18rpx;
+}
+
+.package-card {
+  min-height: 210rpx;
+  padding: 26rpx;
+}
+
+.package-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72rpx;
+  height: 72rpx;
+  font-size: 34rpx;
+  border-radius: 24rpx;
+}
+
+.package-title {
+  margin-top: 28rpx;
+  color: #1d2433;
+  font-size: 30rpx;
+  font-weight: 800;
+}
+
+.package-desc {
+  margin-top: 10rpx;
+  color: #737b91;
+  font-size: 23rpx;
+  line-height: 1.45;
+}
+
+.hot {
+  font-size: 42rpx;
+}
+
+.companion-card {
+  margin-bottom: 22rpx;
+  padding: 28rpx;
+}
+
+.companion-top {
+  display: flex;
+  gap: 22rpx;
+}
+
+.avatar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 128rpx;
+  height: 128rpx;
+  color: #ffffff;
+  font-size: 48rpx;
+  font-weight: 900;
+  border-radius: 36rpx;
+}
+
+.status {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 26rpx;
+  height: 26rpx;
+  background: #a6adbb;
+  border: 6rpx solid #ffffff;
+  border-radius: 50%;
+}
+
+.status.online {
+  background: #35d07f;
+}
+
+.companion-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.name-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.companion-name {
+  color: #1d2433;
+  font-size: 34rpx;
+  font-weight: 900;
+}
+
+.rating {
+  color: #1d2433;
+  font-size: 24rpx;
+  font-weight: 800;
+}
+
+.role {
+  margin-top: 8rpx;
+  color: #737b91;
+  font-size: 24rpx;
+}
+
+.tags {
+  margin-top: 16rpx;
+}
+
+.bio {
+  margin-top: 22rpx;
+  padding: 20rpx;
+  color: #555d70;
+  font-size: 24rpx;
+  line-height: 1.5;
+  background: #f5f7fb;
+  border-radius: 24rpx;
+}
+
+.companion-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 22rpx;
+}
+
+.price {
+  font-size: 40rpx;
+}
+
+.small-button {
+  width: auto;
+  min-width: 176rpx;
+  margin: 0;
+}
+
+.flow {
+  margin-top: 34rpx;
+  padding: 30rpx;
+}
+
+.flow-title {
+  margin-bottom: 26rpx;
+  color: #1d2433;
+  font-size: 34rpx;
+  font-weight: 900;
+}
+
+.flow-step {
+  display: flex;
+  gap: 20rpx;
+  margin-bottom: 24rpx;
+}
+
+.flow-index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68rpx;
+  height: 68rpx;
+  color: #5e5ce6;
+  font-size: 24rpx;
+  font-weight: 900;
+  background: #f0f1ff;
+  border-radius: 22rpx;
+}
+
+.flow-name {
+  color: #1d2433;
+  font-size: 28rpx;
+  font-weight: 800;
+}
+
+.flow-desc {
+  margin-top: 8rpx;
+  color: #737b91;
+  font-size: 24rpx;
+}

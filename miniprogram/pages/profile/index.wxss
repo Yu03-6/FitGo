@@ -1,0 +1,105 @@
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+  padding: 36rpx;
+  color: #ffffff;
+  background: #12192f;
+  border-radius: 44rpx;
+  box-shadow: 0 30rpx 62rpx rgba(18, 25, 47, 0.18);
+}
+
+.profile-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 112rpx;
+  height: 112rpx;
+  font-size: 56rpx;
+  background: linear-gradient(135deg, #5e5ce6, #ff8a5b);
+  border-radius: 36rpx;
+}
+
+.profile-main {
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 36rpx;
+  font-weight: 900;
+}
+
+.profile-desc {
+  margin-top: 10rpx;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 24rpx;
+}
+
+.profile-arrow,
+.menu-arrow {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 48rpx;
+}
+
+.metric-row {
+  display: flex;
+  gap: 18rpx;
+  margin: 28rpx 0;
+}
+
+.metric-card {
+  flex: 1;
+  padding: 26rpx 0;
+  text-align: center;
+}
+
+.metric-value {
+  color: #5e5ce6;
+  font-size: 38rpx;
+  font-weight: 900;
+}
+
+.metric-label {
+  margin-top: 8rpx;
+  color: #737b91;
+  font-size: 23rpx;
+}
+
+.menu-card {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+  margin-bottom: 20rpx;
+  padding: 28rpx;
+}
+
+.menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76rpx;
+  height: 76rpx;
+  font-size: 36rpx;
+  background: #f0f1ff;
+  border-radius: 26rpx;
+}
+
+.menu-copy {
+  flex: 1;
+}
+
+.menu-title {
+  color: #1d2433;
+  font-size: 29rpx;
+  font-weight: 800;
+}
+
+.menu-subtitle {
+  margin-top: 8rpx;
+  color: #737b91;
+  font-size: 23rpx;
+}
+
+.menu-arrow {
+  color: #b3b8c6;
+}

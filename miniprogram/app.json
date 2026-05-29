@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/companions/index",
+    "pages/booking/index",
+    "pages/orders/index",
+    "pages/profile/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "云暮星霞",
+    "navigationBarBackgroundColor": "#12192F",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F5F7FB",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#8A90A3",
+    "selectedColor": "#5E5CE6",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/companions/index",
+        "text": "陪玩"
+      },
+      {
+        "pagePath": "pages/orders/index",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

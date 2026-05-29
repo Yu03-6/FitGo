@@ -1,0 +1,42 @@
+<view class="page companions-page">
+  <view class="page-title">选择你的三角洲队友</view>
+  <view class="page-subtitle">按玩法、沟通风格和在线状态筛选，立即预约上车。</view>
+
+  <scroll-view class="filter-scroll" scroll-x enable-flex>
+    <view class="filter-row">
+      <view
+        class="filter-chip {{activeTag == item ? 'active' : ''}}"
+        wx:for="{{filterTags}}"
+        wx:key="*this"
+        data-tag="{{item}}"
+        bindtap="selectTag"
+      >
+        {{item}}
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="companion-card card" wx:for="{{companions}}" wx:key="id">
+    <view class="companion-top">
+      <view class="avatar" style="background: linear-gradient(135deg, {{item.color}}, {{item.colorAccent}});">
+        <text>{{item.avatar}}</text>
+        <view class="status {{item.online ? 'online' : ''}}"></view>
+      </view>
+      <view class="companion-info">
+        <view class="name-row">
+          <view class="companion-name">{{item.name}}</view>
+          <view class="rating">★ {{item.rating}}</view>
+        </view>
+        <view class="role">{{item.role}}</view>
+        <view class="tags">
+          <text class="tag" wx:for="{{item.tags}}" wx:for-item="tag" wx:key="*this">{{tag}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="bio">💡 {{item.bio}}</view>
+    <view class="companion-bottom">
+      <view><text class="price">¥{{item.price}}</text><text class="muted"> / 小时</text></view>
+      <button class="primary-button small-button" data-id="{{item.id}}" bindtap="goBooking">预约上车</button>
+    </view>
+  </view>
+</view>

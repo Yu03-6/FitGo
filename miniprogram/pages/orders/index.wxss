@@ -1,0 +1,146 @@
+.page-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20rpx;
+}
+
+.page-title {
+  color: #1d2433;
+  font-size: 48rpx;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.page-subtitle {
+  margin-top: 14rpx;
+  color: #737b91;
+  font-size: 26rpx;
+  line-height: 1.55;
+}
+
+.clear-button {
+  width: auto;
+  margin: 0;
+  padding: 0 24rpx;
+  color: #ff8a5b;
+  font-size: 24rpx;
+  line-height: 58rpx;
+  background: #fff3ed;
+  border-radius: 999rpx;
+}
+
+.clear-button::after {
+  border: 0;
+}
+
+.empty {
+  margin-top: 42rpx;
+  padding: 56rpx 34rpx;
+  text-align: center;
+}
+
+.empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 148rpx;
+  height: 148rpx;
+  margin: 0 auto 28rpx;
+  font-size: 64rpx;
+  background: #f0f1ff;
+  border-radius: 48rpx;
+}
+
+.empty-title {
+  color: #1d2433;
+  font-size: 34rpx;
+  font-weight: 900;
+}
+
+.empty-desc {
+  margin: 14rpx 0 28rpx;
+  color: #737b91;
+  font-size: 25rpx;
+}
+
+.empty-button {
+  width: 260rpx;
+  margin: 0 auto;
+}
+
+.order-card {
+  margin-top: 24rpx;
+  padding: 30rpx;
+}
+
+.order-top {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+}
+
+.order-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 88rpx;
+  height: 88rpx;
+  color: #ffffff;
+  font-size: 34rpx;
+  font-weight: 900;
+  border-radius: 28rpx;
+}
+
+.order-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.order-name {
+  color: #1d2433;
+  font-size: 31rpx;
+  font-weight: 900;
+}
+
+.order-service {
+  margin-top: 8rpx;
+  color: #737b91;
+  font-size: 24rpx;
+}
+
+.order-status {
+  padding: 10rpx 18rpx;
+  color: #ff8a5b;
+  font-size: 23rpx;
+  font-weight: 800;
+  background: #fff3ed;
+  border-radius: 999rpx;
+}
+
+.order-info {
+  margin-top: 18rpx;
+  color: #555d70;
+  font-size: 25rpx;
+  line-height: 1.45;
+}
+
+.order-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24rpx;
+  padding-top: 22rpx;
+  border-top: 1rpx solid #eef0f5;
+}
+
+.order-id {
+  color: #9aa1b3;
+  font-size: 22rpx;
+}
+
+.order-price {
+  color: #1d2433;
+  font-size: 38rpx;
+  font-weight: 900;
+}

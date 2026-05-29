@@ -1,0 +1,107 @@
+<view class="page home-page">
+  <view class="header">
+    <view class="logo">✦</view>
+    <view class="brand">
+      <view class="brand-name">云暮星霞</view>
+      <view class="brand-subtitle">三角洲行动陪玩小程序</view>
+    </view>
+    <view class="online-pill">在线 32</view>
+  </view>
+
+  <view class="hero">
+    <view class="hero-pill">今晚开黑 · 极速匹配</view>
+    <view class="hero-title">找懂战术的队友，把每一局都打成高光</view>
+    <view class="hero-desc">摸金带路、排位补位、枪法复盘、情绪陪伴，一站式预约三角洲行动陪玩。</view>
+    <view class="hero-actions">
+      <button class="hero-primary" bindtap="goCompanions">立即匹配</button>
+      <button class="hero-secondary">玩法攻略</button>
+    </view>
+  </view>
+
+  <view class="stats">
+    <view class="stat card">
+      <view class="stat-value">98%</view>
+      <view class="stat-label">好评率</view>
+    </view>
+    <view class="stat card">
+      <view class="stat-value">5min</view>
+      <view class="stat-label">平均响应</view>
+    </view>
+    <view class="stat card">
+      <view class="stat-value">24h</view>
+      <view class="stat-label">全天排班</view>
+    </view>
+  </view>
+
+  <view class="section-header">
+    <view>
+      <view class="section-title">热门服务</view>
+      <view class="section-subtitle">覆盖摸金、排位、教学与娱乐陪伴</view>
+    </view>
+  </view>
+
+  <view class="package-grid">
+    <view class="package-card card" wx:for="{{servicePackages}}" wx:key="id">
+      <view class="package-icon" style="color: {{item.color}};">{{item.icon}}</view>
+      <view class="package-title">{{item.title}}</view>
+      <view class="package-desc">{{item.description}}</view>
+    </view>
+  </view>
+
+  <view class="section-header">
+    <view>
+      <view class="section-title">星霞推荐</view>
+      <view class="section-subtitle">今晚在线的三角洲行动陪玩</view>
+    </view>
+    <view class="hot">🔥</view>
+  </view>
+
+  <view class="companion-card card" wx:for="{{featuredCompanions}}" wx:key="id">
+    <view class="companion-top">
+      <view class="avatar" style="background: linear-gradient(135deg, {{item.color}}, {{item.colorAccent}});">
+        <text>{{item.avatar}}</text>
+        <view class="status {{item.online ? 'online' : ''}}"></view>
+      </view>
+      <view class="companion-info">
+        <view class="name-row">
+          <view class="companion-name">{{item.name}}</view>
+          <view class="rating">★ {{item.rating}}</view>
+        </view>
+        <view class="role">{{item.role}}</view>
+        <view class="tags">
+          <text class="tag" wx:for="{{item.tags}}" wx:for-item="tag" wx:key="*this">{{tag}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="bio">💡 {{item.bio}}</view>
+    <view class="companion-bottom">
+      <view><text class="price">¥{{item.price}}</text><text class="muted"> / 小时</text></view>
+      <button class="primary-button small-button" data-id="{{item.id}}" bindtap="goBooking">预约上车</button>
+    </view>
+  </view>
+
+  <view class="flow card">
+    <view class="flow-title">下单流程</view>
+    <view class="flow-step">
+      <view class="flow-index">01</view>
+      <view>
+        <view class="flow-name">选择陪玩与服务</view>
+        <view class="flow-desc">按战术定位、段位经验和风格挑选队友。</view>
+      </view>
+    </view>
+    <view class="flow-step">
+      <view class="flow-index">02</view>
+      <view>
+        <view class="flow-name">填写时间与需求</view>
+        <view class="flow-desc">备注地图、模式、语音平台和目标玩法。</view>
+      </view>
+    </view>
+    <view class="flow-step">
+      <view class="flow-index">03</view>
+      <view>
+        <view class="flow-name">客服确认后开黑</view>
+        <view class="flow-desc">陪玩准点进队，全程平台质检保障。</view>
+      </view>
+    </view>
+  </view>
+</view>

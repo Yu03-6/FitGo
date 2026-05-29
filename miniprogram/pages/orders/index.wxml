@@ -1,0 +1,36 @@
+<view class="page orders-page">
+  <view class="page-heading">
+    <view>
+      <view class="page-title">我的订单</view>
+      <view class="page-subtitle">查看预约进度、开黑时间和客服确认状态。</view>
+    </view>
+    <button class="clear-button" wx:if="{{orders.length}}" bindtap="clearOrders">清空</button>
+  </view>
+
+  <view class="empty card" wx:if="{{!orders.length}}">
+    <view class="empty-icon">🧾</view>
+    <view class="empty-title">还没有预约订单</view>
+    <view class="empty-desc">去陪玩大厅挑选一位合拍的三角洲队友吧。</view>
+    <button class="primary-button empty-button" bindtap="goCompanions">逛逛陪玩</button>
+  </view>
+
+  <view class="order-card card" wx:for="{{orders}}" wx:key="id">
+    <view class="order-top">
+      <view class="order-avatar" style="background: linear-gradient(135deg, {{item.companion.color}}, {{item.companion.colorAccent}});">{{item.companion.avatar}}</view>
+      <view class="order-main">
+        <view class="order-name">{{item.companion.name}}</view>
+        <view class="order-service">{{item.servicePackage.title}} · {{item.durationHours}} 小时</view>
+      </view>
+      <view class="order-status">{{item.status}}</view>
+    </view>
+
+    <view class="order-info">⏰ {{item.timeLabel}}</view>
+    <view class="order-info">🎧 {{item.voiceChannel}}</view>
+    <view class="order-info" wx:if="{{item.note}}">📝 {{item.note}}</view>
+
+    <view class="order-bottom">
+      <view class="order-id">订单号 {{item.id}}</view>
+      <view class="order-price">¥{{item.totalPrice}}</view>
+    </view>
+  </view>
+</view>

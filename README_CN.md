@@ -1,138 +1,42 @@
-# FitGo
+# 云暮星霞
 
-AI 驱动的健身餐食规划应用。根据你的身体数据和饮食偏好，自动生成个性化的每周膳食计划。
+云暮星霞是一个面向《三角洲行动》玩家的微信原生陪玩预约小程序，可直接用微信开发者工具导入 `miniprogram/` 目录运行。
 
-## 技术栈
+## 当前功能
 
-| 层级 | 技术 |
-|-------|-----------|
-| 后端 | Node.js + Express |
-| 数据库 | MySQL |
-| 前端 | Flutter（Android / iOS / Web / Windows） |
-| 第三方 API | Spoonacular（膳食规划）、Resend（邮件发送） |
-
-## 功能
-
-- 用户注册（邮箱 OTP 验证）
-- 基于 JWT 的身份认证与密码重置
-- 根据身高、体重、年龄、性别、活动量自动计算每日热量（TDEE）
-- 通过 Spoonacular API 生成 AI 周膳食计划
-- 支持多种饮食偏好：普通、素食、生酮、纯素
-- 收藏与查看喜欢的膳食计划
-- 支持排除过敏或不喜欢的食材
+- “云暮星霞”品牌首页
+- 三角洲行动陪玩服务卡片
+- 陪玩大厅：按玩法标签筛选陪玩
+- 预约流程：选择服务、时长、开黑时间、语音方式和补充需求
+- 订单页：使用微信小程序本地存储保存预约订单
+- 个人中心：客服售后、陪玩认证、会员权益和平台公告入口
 
 ## 项目结构
 
-```
-FitGo/
-├── backend/                  # Node.js API 服务
-│   ├── controllers/          # 认证、膳食、用户逻辑
-│   ├── middleware/            # JWT 认证中间件
-│   ├── routes/               # Express 路由定义
-│   ├── services/             # Spoonacular、邮件、用户服务
-│   ├── utils/                # 热量计算器、邮件发送工具
-│   ├── migrations/           # 数据库迁移文件
-│   └── server.js             # 入口文件（端口 3000）
-├── flutter/                  # Flutter 移动端/Web/桌面端
-│   └── lib/
-│       ├── models/           # 数据模型（JSON 序列化）
-│       ├── providers/        # 认证与数据状态管理
-│       ├── screens/          # 界面页面（引导、首页等）
-│       ├── services/         # API 客户端、本地存储
-│       └── router/           # 路由定义
-├── schema.sql                # 数据库结构参考
-└── start-app.sh              # 一键启动脚本
+```text
+.
+├── miniprogram/              # 微信原生小程序工程
+│   ├── app.js
+│   ├── app.json
+│   ├── app.wxss
+│   ├── project.config.json
+│   ├── pages/
+│   │   ├── home/             # 首页
+│   │   ├── companions/       # 陪玩大厅
+│   │   ├── booking/          # 预约表单
+│   │   ├── orders/           # 订单列表
+│   │   └── profile/          # 我的
+│   └── utils/data.js         # 陪玩与服务模拟数据
+├── backend/                  # 原有 Node.js API 服务
+└── flutter/                  # 原有 Flutter 客户端
 ```
 
-## 快速开始
+## 在微信开发者工具运行
 
-### 环境要求
+1. 打开微信开发者工具。
+2. 选择“导入项目”。
+3. 项目目录选择仓库里的 `miniprogram/` 文件夹。
+4. AppID 可以替换成你自己的；本地预览也可以保留 `touristappid`。
+5. 点击编译即可预览。
 
-- **Node.js** 18+
-- **MySQL** 8.0+
-- **Flutter SDK** 3.0+
-
-### 1. 创建数据库
-
-```bash
-mysql -u root -p < schema.sql
-```
-
-### 2. 启动后端
-
-```bash
-cd backend
-cp .env.example .env
-```
-
-编辑 `.env`，填入你的实际配置：
-
-```env
-MYSQL_HOST=localhost
-MYSQL_PORT=3306
-MYSQL_USER=root
-MYSQL_PASSWORD=你的MySQL密码
-MYSQL_DATABASE=fitgo
-
-JWT_SECRET=你的JWT密钥
-JWT_EXPIRY=7d
-
-SPOONACULAR_API_KEY=你的Spoonacular_API密钥
-SPOONACULAR_BASE_URL=https://api.spoonacular.com/mealplanner/generate
-
-RESEND_API_KEY=你的Resend_API密钥
-RESEND_FROM_EMAIL=no-reply@你的域名.com
-```
-
-```bash
-npm install
-npm run dev
-```
-
-API 服务启动在 `http://localhost:3000`。
-
-### 3. 启动 Flutter 应用
-
-```bash
-cd flutter
-flutter pub get
-flutter run
-```
-
-### 一键启动
-
-```bash
-bash start-app.sh    # macOS / Linux
-.\start-app.ps1      # Windows PowerShell
-```
-
-## API 接口
-
-| 方法 | 路径 | 说明 |
-|--------|------|-------------|
-| POST | `/api/auth/register` | 注册（发送邮箱验证码） |
-| POST | `/api/auth/verify-otp` | 验证注册 OTP |
-| POST | `/api/auth/login` | 邮箱密码登录 |
-| POST | `/api/auth/forgot-password` | 请求密码重置 |
-| POST | `/api/auth/reset-password` | 通过 OTP 重置密码 |
-| GET | `/api/meal/generate` | 生成膳食计划（需登录） |
-| POST | `/api/meal/save` | 保存膳食计划（需登录） |
-| GET | `/api/meal/saved` | 获取已保存的膳食计划（需登录） |
-| GET | `/api/user/profile` | 获取用户资料（需登录） |
-| PUT | `/api/user/profile` | 更新用户资料（需登录） |
-
-## 环境变量说明
-
-| 变量 | 说明 |
-|----------|-------------|
-| `MYSQL_HOST` | MySQL 主机地址 |
-| `MYSQL_PORT` | MySQL 端口 |
-| `MYSQL_USER` | MySQL 用户名 |
-| `MYSQL_PASSWORD` | MySQL 密码 |
-| `MYSQL_DATABASE` | 数据库名称 |
-| `JWT_SECRET` | JWT 签名密钥 |
-| `JWT_EXPIRY` | Token 过期时间 |
-| `SPOONACULAR_API_KEY` | [Spoonacular API](https://spoonacular.com/food-api) 密钥 |
-| `RESEND_API_KEY` | [Resend](https://resend.com) API 密钥（邮件服务） |
-| `RESEND_FROM_EMAIL` | 发件人邮箱地址 |
-| `PORT` | 服务器端口（默认: 3000） |
+当前版本使用本地模拟数据与 `wx.setStorageSync` 保存订单，不依赖后端即可运行。

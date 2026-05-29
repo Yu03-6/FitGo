@@ -1,0 +1,166 @@
+@import "../home/index.wxss";
+
+.booking-page {
+  padding-bottom: 160rpx;
+}
+
+.booking-hero {
+  display: flex;
+  gap: 22rpx;
+  padding: 28rpx;
+}
+
+.booking-companion {
+  flex: 1;
+  min-width: 0;
+}
+
+.booking-name {
+  color: #1d2433;
+  font-size: 38rpx;
+  font-weight: 900;
+}
+
+.booking-role {
+  margin-top: 10rpx;
+  color: #737b91;
+  font-size: 25rpx;
+  line-height: 1.45;
+}
+
+.booking-rating {
+  margin-top: 14rpx;
+  color: #ff8a5b;
+  font-size: 25rpx;
+  font-weight: 800;
+}
+
+.form-block {
+  margin-top: 34rpx;
+}
+
+.form-title {
+  margin-bottom: 18rpx;
+  color: #1d2433;
+  font-size: 30rpx;
+  font-weight: 900;
+}
+
+.package-option {
+  display: flex;
+  align-items: center;
+  gap: 18rpx;
+  margin-bottom: 18rpx;
+  padding: 24rpx;
+  background: #ffffff;
+  border: 2rpx solid transparent;
+  border-radius: 28rpx;
+}
+
+.package-option.active {
+  background: #f0f1ff;
+  border-color: #5e5ce6;
+}
+
+.package-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68rpx;
+  height: 68rpx;
+  font-size: 34rpx;
+  background: #ffffff;
+  border-radius: 22rpx;
+}
+
+.package-copy {
+  flex: 1;
+}
+
+.package-name {
+  color: #1d2433;
+  font-size: 28rpx;
+  font-weight: 800;
+}
+
+.package-desc {
+  margin-top: 8rpx;
+  color: #737b91;
+  font-size: 23rpx;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40rpx;
+  height: 40rpx;
+  color: #ffffff;
+  font-weight: 900;
+  background: #5e5ce6;
+  border-radius: 50%;
+}
+
+.duration-row {
+  display: flex;
+  gap: 14rpx;
+}
+
+.duration-chip {
+  flex: 1;
+  padding: 18rpx 0;
+  color: #1d2433;
+  font-size: 25rpx;
+  font-weight: 800;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 999rpx;
+}
+
+.duration-chip.active {
+  color: #ffffff;
+  background: #12192f;
+}
+
+.picker-card,
+.note-input {
+  width: 100%;
+  padding: 24rpx;
+  color: #1d2433;
+  font-size: 27rpx;
+  background: #ffffff;
+  border-radius: 24rpx;
+}
+
+.picker-card::after {
+  float: right;
+  color: #8a90a3;
+  content: "›";
+}
+
+.note-input {
+  height: 180rpx;
+  line-height: 1.5;
+}
+
+.submit-bar {
+  position: fixed;
+  right: 32rpx;
+  bottom: 36rpx;
+  left: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22rpx 24rpx;
+}
+
+.total {
+  color: #ff8a5b;
+  font-size: 44rpx;
+  font-weight: 900;
+}
+
+.submit-button {
+  width: 240rpx;
+  margin: 0;
+}

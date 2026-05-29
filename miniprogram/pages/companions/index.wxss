@@ -1,0 +1,43 @@
+@import "../home/index.wxss";
+
+.page-title {
+  color: #1d2433;
+  font-size: 48rpx;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.page-subtitle {
+  margin-top: 14rpx;
+  color: #737b91;
+  font-size: 26rpx;
+  line-height: 1.55;
+}
+
+.filter-scroll {
+  width: 100%;
+  margin: 28rpx 0 26rpx;
+  white-space: nowrap;
+}
+
+.filter-row {
+  display: flex;
+  gap: 16rpx;
+}
+
+.filter-chip {
+  flex-shrink: 0;
+  padding: 16rpx 26rpx;
+  color: #1d2433;
+  font-size: 25rpx;
+  font-weight: 700;
+  background: #ffffff;
+  border: 1rpx solid #e7e9f1;
+  border-radius: 999rpx;
+}
+
+.filter-chip.active {
+  color: #5e5ce6;
+  background: #f0f1ff;
+  border-color: #5e5ce6;
+}

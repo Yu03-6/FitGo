@@ -1,0 +1,26 @@
+<view class="page profile-page">
+  <view class="profile-card">
+    <view class="profile-logo">☾</view>
+    <view class="profile-main">
+      <view class="profile-name">云暮星霞玩家</view>
+      <view class="profile-desc">三角洲行动陪玩预约会员</view>
+    </view>
+    <view class="profile-arrow">›</view>
+  </view>
+
+  <view class="metric-row">
+    <view class="metric-card card" wx:for="{{metrics}}" wx:key="label">
+      <view class="metric-value">{{item.value}}</view>
+      <view class="metric-label">{{item.label}}</view>
+    </view>
+  </view>
+
+  <view class="menu-card card" wx:for="{{menuItems}}" wx:key="title">
+    <view class="menu-icon">{{item.icon}}</view>
+    <view class="menu-copy">
+      <view class="menu-title">{{item.title}}</view>
+      <view class="menu-subtitle">{{item.subtitle}}</view>
+    </view>
+    <view class="menu-arrow">›</view>
+  </view>
+</view>
